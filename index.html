@@ -7,9 +7,9 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <style type="text/css">
     body {
-      color: #B0009A;
-      font-family: Lobster;
+      /* color: #B0009A; */
       font-size: 2em;
+      /*font-family: 'Lobster';*/
       }
     header {
       height: 50%;
@@ -17,7 +17,6 @@
     }
     section {
       height: 50%;
-      background-image:url('water.jpg');
       background-repeat: repeat;
     }
     h1 {
@@ -32,14 +31,12 @@
       width:300px;
       font-size: 1.5em;
       text-align: center;
-      font-family: "Lobster";
       color: #B0009A;
     }
     button {
       width:300px;
       font-size: 50px;
       text-align: center;
-      font-family: Lobster;
       color: #00B016;
     }
 
@@ -48,7 +45,7 @@
       margin: 0 auto;
       padding-top: 100px;
       width: 100%;
-      height: 75%;
+      height: 280px;
     }
 
     .racer_table td {
@@ -57,7 +54,6 @@
       width: 50px;
       min-width: 50px;
       min-height: 50px;
-      /* border: solid gray 1px; */
     }
 
     .racer_table td:last-child {
@@ -65,14 +61,14 @@
       background-size: 130%;
     }
 
+    /* Player 1 */
     .racer_table td.active {
-      background-image:url('doggy_paddle.gif');
       background-position: center;
-      background-size: 100%;
+      background-size: 103%;
     }
 
-    .racer_table tr:nth-child(even) td.active {
-      background-image:url('luigi.gif');
+    /* Player 2 */
+    .racer_table tr:nth-child(2) td.active {
     }
 
     #announce-win {
@@ -98,12 +94,12 @@
         <input id='player1' type="text" placeholder="Player 1 Name">
       </p>
       <p>
-        <input id='player2' type="text" placeholder="Player 2 Name">
+        <!-- Put your player2 text field here! -->
+        <!-- Look at line #94 for a hint. -->
       </p>
 
     </form>
     <p>
-        <!-- <input type="submit" value="Play!"> -->
         <button id="submit">Play!</button>
       </p>
 
