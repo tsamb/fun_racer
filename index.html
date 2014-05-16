@@ -35,7 +35,7 @@
       font-family: "Lobster";
       color: #B0009A;
     }
-    input[type=submit] {
+    button {
       width:300px;
       font-size: 50px;
       text-align: center;
@@ -82,15 +82,17 @@
     <h1>Super cool racing game!</h1>
     <form>
       <p>
-        <input type="text" placeholder="Player 1 Name">
+        <input id='player1' type="text" placeholder="Player 1 Name">
       </p>
       <p>
-        <input type="text" placeholder="Player 2 Name">
+        <input id='player2' type="text" placeholder="Player 2 Name">
       </p>
-      <p>
-        <input type="submit" value="Play!">
-      </p>
+
     </form>
+    <p>
+        <!-- <input type="submit" value="Play!"> -->
+        <button id="submit">Play!</button>
+      </p>
 
   </header>
   <section>

@@ -1,6 +1,6 @@
-function player(name) {
+function player(name, position) {
   this.name = name;
-  position = 1;
+  this.position = position;
 }
 
 function game() {
@@ -15,31 +15,43 @@ game.prototype.finish = function() {
   this.duration = Date.now() - this.duration;
 }
 
-function countDown(count) {
-  console.log('countdown has fired')
-  var check = function() {
-    console.log("check function");
-    console.log(count);
-    if (count === -1) {
-      $("#giant-doge").html("");
-      $("#go").html("");
-      fireEverything();
-    } else if(count === 0){
-      $("#countdown").html("");
-      $("#go").html("GO!");
-      setTimeout(check,1000);
-      count --;
-    } else {
-      $("#countdown").html(count);
-      setTimeout(check,1000);
-      count --;
-    }
-  }
-  check();
-}
+// function countDown(count) {
+//   console.log('countdown has fired')
+//   var check = function() {
+//     console.log("check function");
+//     console.log(count);
+//     if (count === -1) {
+//       $("#giant-doge").html("");
+//       $("#go").html("");
+//       fireEverything();
+//     } else if(count === 0){
+//       $("#countdown").html("");
+//       $("#go").html("GO!");
+//       setTimeout(check,1000);
+//       count --;
+//     } else {
+//       $("#countdown").html(count);
+//       setTimeout(check,1000);
+//       count --;
+//     }
+//   }
+//   check();
+// }
 
 $(document).ready(function() {
   currentGame = new game();
+  var player1
+  var player2
+
+  $('#submit').on('click', function(e){
+
+    var player1Name = $('#player1').val();
+    var player2Name = $('#player2').val();
+
+    player1 = new player(player1Name, 1);
+    player2 = new player(player2Name, 2);
+  });
+
   $(document).keyup(function(event) {
     console.log("WHASSSSSSSUP KEYUP SOMETHING")
     if(event.keyCode == 81){update_player_position("player1"); console.log("P1 moves");}
