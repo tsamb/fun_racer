@@ -3,13 +3,11 @@ function player(name) {
   position = 1;
 }
 
-function game(id) {
-  this.id = id;
+function game() {
 }
 
 game.prototype.start = function() {
   console.log("MUCH STARTING! MANY GO! WOW!")
-  this.duration = Date.now();
 }
 
 game.prototype.finish = function() {
@@ -41,18 +39,11 @@ function countDown(count) {
 }
 
 $(document).ready(function() {
-  console.log("one line before countdown");
-  countDown(3);
-  console.log("one line after countdown");
-});
-
-fireEverything = function() {
-  currentGame = new game(1);
-
-    currentGame.start();
-    $(document).keyup(function(event) {
-      if(event.keyCode == 81){update_player_position("player1");}
-      if(event.keyCode == 80){update_player_position("player2");}
+  currentGame = new game();
+  $(document).keyup(function(event) {
+    console.log("WHASSSSSSSUP KEYUP SOMETHING")
+    if(event.keyCode == 81){update_player_position("player1"); console.log("P1 moves");}
+    if(event.keyCode == 80){update_player_position("player2"); console.log("P2 moves");}
       // Detect which key was pressed and call the appropriate function
       // Google "jquery keyup what key was pressed" if you don't know how
       if($("#player1_strip #second-box").hasClass("active")) {
@@ -69,6 +60,14 @@ fireEverything = function() {
         endGame(1, currentGame.duration);
       }
     });
+  // fireEverything
+  // console.log("one line before countdown");
+  // countDown(3);
+  // console.log("one line after countdown");
+});
+
+fireEverything = function() {
+
 }
 
 var update_player_position = function (player) {
