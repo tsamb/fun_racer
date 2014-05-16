@@ -17,7 +17,7 @@
     }
     section {
       height: 50%;
-      background-image:url('stars.gif');
+      background-image:url('water.jpg');
       background-repeat: repeat;
     }
     h1 {
@@ -66,13 +66,26 @@
     }
 
     .racer_table td.active {
-      background-image:url('fish.gif');
+      background-image:url('doggy_paddle.gif');
       background-position: center;
       background-size: 100%;
     }
 
     .racer_table tr:nth-child(even) td.active {
-      background-image:url('pug.gif');
+      background-image:url('luigi.gif');
+    }
+
+    #announce-win {
+      display: none;
+      width: 500px;
+      height: 200px;
+      z-index: 1000;
+      background-color: white;
+      position: absolute;
+      left: 30%;
+      text-align: center;
+      line-height: 200px;
+      vertical-align: middle;
     }
 
   </style>
@@ -96,6 +109,7 @@
 
   </header>
   <section>
+    <div id="announce-win"></div>
     <table class="racer_table">
 
       <tr id="player1_strip">

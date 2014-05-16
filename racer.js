@@ -66,12 +66,12 @@ $(document).ready(function() {
         console.log("P1 wins");
         currentGame.finish();
         console.log(currentGame.duration);
-        endGame(1, currentGame.duration);
+        endGame(player1);
       } else if($("#player2_strip .last-box").hasClass("active")) {
         console.log("P1 wins");
         currentGame.finish();
         console.log(currentGame.duration);
-        endGame(2, currentGame.duration);
+        endGame(player2);
       }
     });
   // fireEverything
@@ -89,7 +89,8 @@ var update_player_position = function (player) {
   $("#" + player + "_strip .active").prev().removeClass('active');
 }
 
-var endGame = function(player, duration) {
-  $('#game-end').css('display','inline');
+var endGame = function(player) {
+  $('#announce-win').css('display','inline');
+  $('#announce-win').html(player.name + " WINS!!!");
   $("td").removeClass("last-box");
 };
