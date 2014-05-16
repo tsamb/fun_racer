@@ -51,13 +51,15 @@ $(document).ready(function() {
       }
       if($("#player1_strip .last-box").hasClass("active")) {
         // Maybe send duration to endGame function alongside winning player...
+        console.log("P1 wins");
         currentGame.finish();
         console.log(currentGame.duration);
         endGame(1, currentGame.duration);
       } else if($("#player2_strip .last-box").hasClass("active")) {
+        console.log("P1 wins");
         currentGame.finish();
         console.log(currentGame.duration);
-        endGame(1, currentGame.duration);
+        endGame(2, currentGame.duration);
       }
     });
   // fireEverything
@@ -77,8 +79,5 @@ var update_player_position = function (player) {
 
 var endGame = function(player, duration) {
   $('#game-end').css('display','inline');
-  $.post("/end_game",{player:player, duration:duration}, function(results_page) {
-    window.location.href = results_page;
-  });
   $("td").removeClass("last-box");
 };
