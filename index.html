@@ -41,6 +41,26 @@
       color: #00B016;
     }
 
+    .racer_table {
+      position: relative;
+    }
+
+    .racer_table td {
+      position: relative;
+      background-color: white;
+      height: 50px;
+      width: 50px;
+      min-width: 50px;
+      min-height: 50px;
+      border: solid gray 1px;
+    }
+
+    .racer_table td.active {
+      background-image:url('pug.gif');
+      background-position: center;
+
+    }
+
   </style>
 </head>
 <body>
@@ -60,7 +80,47 @@
 
   </header>
   <section>
+    <table class="racer_table">
 
+      <tr id="player1_strip">
+        <td class="active" id="first-box"></td>
+        <td id="second-box"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="last-box"></td>
+      </tr>
+      <tr id="player2_strip">
+        <td id="first-box" class="active"></td>
+        <td id="second-box"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="last-box"></td>
+      </tr>
+    </table>
   </section>
 </body>
 </html>
