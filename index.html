@@ -43,22 +43,29 @@
 
     .racer_table {
       position: relative;
+      margin: 0 auto;
+      padding-top: 100px;
+      width: 100%;
+      height: 75%;
     }
 
     .racer_table td {
       position: relative;
-      background-color: white;
       height: 50px;
       width: 50px;
       min-width: 50px;
       min-height: 50px;
-      border: solid gray 1px;
+      /* border: solid gray 1px; */
+    }
+
+    .racer_table td:last-child {
+      border: solid white 3px;
     }
 
     .racer_table td.active {
       background-image:url('pug.gif');
       background-position: center;
-
+      background-size: 100%;
     }
 
   </style>
